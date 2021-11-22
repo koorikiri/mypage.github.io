@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
-<script>
-  $document.ready(function(){
-    $("button").addClass("animated bounce");
-    $("#btn1").prop("disabled" , true);
-    $("#btn3").prop("disabled" , true);
-
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      $("#btn1").prop("disabled" , true);
+      $("#btn3").prop("disabled" , true);
+      $("#message").addClass("text-success");
+    });
+    document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('btn2').onclick = function(){
+      document.getElementsByClassName('message')[0].textContent="好不容易終於用出這個效果了...";
+    }
   });
-</script>
-<style>
-  .middle{
-    display:block;
-    margin:auto;" 
-  };
-</style>
+  </script>
+  <style>
+    .middle{
+      display:block;
+      margin:auto;" 
+    };
+  </style>
+</head>
 <main>
   <html>
     <title>
       我真的不知道...
     </title>
-    <body bgcolor="#F0FFFF">
+    <body>
       <div class="container-fluid">
         <h1 align="center" style="color: #191970; font-family:Microsoft JhengHei;">
           <b>
@@ -42,7 +48,7 @@
           </div>
           <div class="col-xs-4">
             <button class="btn btn-secondary btn-block target" id="btn2">
-              點我點我!!
+              點我LA!
             </button>
           </div>
           <div class="col-xs-4">
@@ -51,6 +57,10 @@
             </button>
           </div>
         </div>
+        <p align="center"></p>
+        <p align="center"></p>
+        <p align="center"></p>
+        <p class="message box" align="center" id="message"></p>
       </div>
     </body>
   </html>
