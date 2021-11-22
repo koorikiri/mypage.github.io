@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<script>
+  $document.ready(function(){
+    $("button").addClass("animated bounce");
+    $("#btn1").prop("disabled" , true);
+    $("#btn3").prop("disabled" , true);
+
+  });
+</script>
 <style>
   .middle{
     display:block;
@@ -11,16 +21,37 @@
       我真的不知道...
     </title>
     <body bgcolor="#F0FFFF">
-      <h1 align="center" style="color: #191970; font-family:Microsoft JhengHei;">
-        <b>
-        你問我在做甚麼?
-        </b>
-      </h1> 
-      <img src="https://wiki.komica.org/images/thumb/d/d3/M%C3%A9lusine-%E7%AA%A9%E4%B8%8D%E7%9F%A5%E9%81%93.jpeg/200px-M%C3%A9lusine-%E7%AA%A9%E4%B8%8D%E7%9F%A5%E9%81%93.jpeg" class="middle">
-      <p align="center">
-        不過還是要用點東西 不然感覺我像是沒在做事 <!--其實就是啊-->
-      </p>
-      <input type="button" value="點我點我" name="按鈕名稱" style="width:200px;height: 100px; font-size: 45px;" class="middle" onclick="this.value='謝謝尼!!'">
+      <div class="container-fluid">
+        <h1 align="center" style="color: #191970; font-family:Microsoft JhengHei;">
+          <b>
+          你問我在做甚麼?
+          </b>
+        </h1> 
+        <img src="https://wiki.komica.org/images/thumb/d/d3/M%C3%A9lusine-%E7%AA%A9%E4%B8%8D%E7%9F%A5%E9%81%93.jpeg/200px-M%C3%A9lusine-%E7%AA%A9%E4%B8%8D%E7%9F%A5%E9%81%93.jpeg" class="middle">
+        <p align="center">
+          不過還是要用點東西 不然感覺我像是沒在做事 <!--其實就是啊-->
+        </p>
+        <p align="center">
+          ↓戳戳下面的按鈕吧↓
+        </p>
+        <div class="row">
+          <div class="col-xs-4">
+            <button class="btn btn-secondary btn-block target" id="btn1">
+              不是我
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="btn btn-secondary btn-block target" id="btn2">
+              點我點我!!
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="btn btn-secondary btn-block target" id="btn3">
+              也不是我
+            </button>
+          </div>
+        </div>
+      </div>
     </body>
   </html>
 </main>
